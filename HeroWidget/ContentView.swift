@@ -7,10 +7,21 @@
 
 import SwiftUI
 
+//15
+let superHeroArray = [captain, batman, ironman]
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        //16
+        VStack{
+            ForEach(superHeroArray){ hero in //hero in yapinca butun superhero array icindeki elementler hero degiskenine ataniyor
+                HeroView(hero: hero)
+                //17 tiklaninca ne olacak onu yazmaya basliyoruz
+                    .onTapGesture{
+                    }
+                
+            }
+        }
     }
 }
 
